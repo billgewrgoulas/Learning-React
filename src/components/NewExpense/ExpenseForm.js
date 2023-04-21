@@ -34,7 +34,11 @@ function ExpenseForm(props){
         setEnteredTitle('');
         setEnteredAmount('');
         setEnteredDate('');
+        toggleContent();
     }
+
+    const toggleContent = (e) => props.onCancel();
+    
 
     return (
         <form onSubmit={submitHandler}>
@@ -53,6 +57,7 @@ function ExpenseForm(props){
                 </div>
             </div>
             <div className="new-expense__actions">
+                <button onClick={toggleContent}>Cancel</button>
                 <button type='submit'>Add Expense</button>
             </div>
         </form>
