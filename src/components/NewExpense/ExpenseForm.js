@@ -26,7 +26,7 @@ function ExpenseForm(props){
 
         const expenseData = {
             title: previousTitle,
-            amount: previousAmount,
+            amount: +previousAmount,
             date: new Date(previousDate)
         };
 
@@ -39,7 +39,6 @@ function ExpenseForm(props){
 
     const toggleContent = (e) => props.onCancel();
     
-
     return (
         <form onSubmit={submitHandler}>
             <div className="new-exepense__controls">
